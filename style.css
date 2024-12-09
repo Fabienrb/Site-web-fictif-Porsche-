@@ -1,0 +1,427 @@
+/*Début Général */
+
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;   
+    list-style: none;
+}
+
+body {
+    font-family: 'Times New Roman', Times, serif;
+    background: var(--background);
+    display: flex;
+    flex-direction: column;
+}
+
+
+header {
+    height: 20vh;
+    width: 100vw;
+    background: var(--background);
+    background-size: cover;
+}
+
+/*Fin Général */
+
+.contenu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.contenu p1 {
+    color: var(--ecriture);
+    font-size: 3em;
+}
+
+.contenu p2 {
+    color: var(--ecriture2);
+    font-size: 1.8em;
+    display: flex; 
+    justify-content: center;
+    align-items: center;   
+}
+
+
+.profil {
+    font-size: 20px;
+    border-radius: 10px;
+    padding: 2px;
+    justify-content: center;
+    display: flex;
+    margin: 60px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.cadre p2 img {
+    height: 70px;
+    margin-top: 10px;
+}
+
+.cadre {
+    font-size: 25px;
+    border-radius: 10px;
+    box-shadow: 6px 6px 25px rgba(0, 0, 0, 0.5);
+    padding: 1em;
+    place-content: center; 
+    margin: auto;
+    display: flex;
+}
+
+.cadre {
+    --color :hsla(0, 0%, 36%, 0.575);
+    display: inline-block;
+    cursor:pointer;
+    text-decoration: none;
+    border: 3px solid var(--color);
+    color: rgb(0, 0, 0);
+    padding: .5em 1em;
+    border-radius: .25em;
+    z-index: 1;
+
+    position: relative;
+    isolation: isolate;
+}
+
+
+.cadre::after {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    inset: 0;
+    background: var(--color);
+    scale: 0 1;
+    transform-origin: right;
+    transition: scale 450ms;
+}
+
+
+.cadre:hover::after,
+.cadre:focus-visible::after {
+    transform-origin: left;
+    scale: 1 1;
+}
+
+.profil p1 {
+    color: var(--ecriture);
+    display: flex;
+
+}
+
+.profil p3 {
+    color: var(--ecriture);
+    display: flex;
+    justify-content: center;
+
+}
+
+.profil p2 {
+    color: var(--ecriture2);
+    font-size: 30px;
+}
+
+.profil p2 a {
+    color: var(--ecriture2);
+    text-decoration: underline; 
+}
+
+/* Fin contenu acceuil */
+
+/* Début Barre de navigation version PC */
+
+.navbar {
+    position: absolute;
+    padding: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.navbar a {
+    color: var(--ecriture);
+    font-size: 30px;
+}
+
+.navbar .logo {
+    font-size: 2em;
+    font-weight: bold;
+}
+
+
+.navbar .nav-links ul {
+    display: flex;
+    border-radius: 15px;
+    border-color: var(--ecriture);
+    padding: 2px;
+    
+}
+
+.navbar .nav-links ul li {
+    margin: 0 25px;  
+}
+
+.navbar .nav-links ul li.active a {
+    color: #857b7bb2;
+    font-weight: 1000;
+}
+
+.navbar .menu-hamburger {
+    position: absolute;
+    display: none;
+    top: 50px;
+    right: 30px;
+    width: 35px;
+}
+/* Fin Barre de navigation version PC */
+
+
+/* Début Changement de Thème */
+
+.changeTheme {
+    position: absolute;
+    display : flex;
+    justify-content: right;
+    bottom: 10px;
+    right: 30px;
+    height: 45px;
+}
+.changeTheme img {
+    bottom: 10px;
+    border-radius: 15px;
+    z-index: 4;
+}
+
+:root {
+    --ecriture: #262626; /* Couleur de texte clair */
+    --background: #f1f1f1; /* Couleur de fond clair */
+    --ecriture2: #494949; /* Couleur de texte secondaire clair */
+}
+
+[data-theme="dark"] {
+    --ecriture: #f1f1f1; /* Couleur de texte sombre */
+    --background: #262626; /* Couleur de fond sombre */
+    --ecriture2: #64648b; /* Couleur de texte secondaire sombre */
+}
+
+body {
+    background-color: var(--background);
+    color: var(--ecriture);
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.navbar, .profil, .contenu, footer {
+    color: var(--ecriture2);
+}
+
+.changeTheme img {
+    cursor: pointer;
+}
+
+
+/* Fin du Changement de Thème */
+
+
+/* Début Position du changement de Thème */
+
+.changeTheme {
+    position: fixed; /* Fixe le bouton à une position précise */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    bottom: 20px; /* Distance du bas de la fenêtre */
+    right: 20px; /* Distance du côté droit */
+    width: 50px; /* Taille carrée pour mieux gérer l'icône */
+    height: 50px;
+    border-radius: 50%; /* Donne une forme circulaire au bouton */
+    background-color: var(--ecriture1); /* Fond en fonction du thème */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Une légère ombre */
+    cursor: pointer;
+    z-index: 100; /* S'assurer qu'il est visible devant tout le reste */
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.changeTheme img {
+    max-width: 70%; /* Ajuste la taille de l'image à l'intérieur du bouton */
+    max-height: 70%;
+}
+
+.changeTheme:hover {
+    transform: scale(1.1); /* Agrandit légèrement au survol */
+    background-color: var(--background); /* Change la couleur pour indiquer l'interaction */
+}
+
+/* Fin Position du changement de Thème */
+
+/* Conteneur vidéo Nouveauté */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Conteneur vidéo Nouveauté */
+.card-image {
+    position: relative; /* Permet des ajustements précis */
+    width: 100%; /* La largeur s'adapte à son parent */
+    max-width: 600px; /* Limite la taille maximale du conteneur */
+    margin: 0 auto; /* Centre horizontalement le conteneur */
+    border-radius: 15px;
+    overflow: hidden; /* Évite le dépassement des bords */
+}
+
+/* Vidéo Nouveauté */
+.video-nouveaute {
+    width: 100%; /* Remplit le conteneur */
+    height: auto; /* Conserve les proportions de la vidéo */
+    display: block;
+    object-fit: cover; /* Ajuste l'apparence de la vidéo si elle dépasse les dimensions */
+    border-radius: 15px;
+}
+
+body {
+    background-color: var(--background);
+    color: var(--ecriture);
+    font-style: normal;
+    font-weight: 400;
+}
+
+.card-btn a {
+    color: var(--ecriture);
+}
+
+h1 {
+    font-size: 40px;
+    font-weight: 500;
+    text-align: center;
+    margin-top: 2em;
+}
+
+.card {
+    border-radius: 1rem;
+    background-color: rgba(18,23,42, 1);
+    box-shadow: 0 20px 40px -14px rgba(0, 0, 0, 0.25);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    margin: 1rem auto; /* Centrage global de la carte */
+    max-width: 600px; /* Limite la largeur des cartes */
+}
+
+.card-body {
+    padding: 1rem;
+    background-color: var(--background);
+}
+
+.card-title {
+    color: var(--ecriture);
+    font-size: 1.1rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: capitalize;
+    margin: 0px;
+}
+
+.card-text {
+    color: var(--ecriture);
+    font-size: 0.875rem;
+    line-height: 1.5;
+    margin-bottom: 1.25rem;
+    font-weight: 400;
+}
+
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    margin-top: 1rem;
+    padding: 0;
+    justify-content: center; /* Centre les cartes dans le conteneur */
+}
+
+.card-container {
+    display: flex;
+    padding: 1rem;
+}
+
+/* Bouton VOIR PLUS */
+.btn.card-btn {
+    color: var(--ecriture);
+    padding: 0.8em;
+    font-size: 14px;
+    text-transform: uppercase;
+    border-radius: 4px;
+    font-weight: 400;
+    width: 100%; /* Étend le bouton sur toute la largeur du conteneur */
+    cursor: pointer;
+    border: 1px solid hsla(0, 0%, 36%, 0.575);
+    background: transparent;
+    text-align: center; /* Centre le texte du bouton */
+    display: inline-block; /* Assure un rendu propre du bouton */
+}
+
+.btn.card-btn:hover {
+    background-color: hsla(0, 0%, 36%, 0.575);
+}
+
+/* Supprime le soulignement du lien et ajuste son style */
+.btn.card-btn a {
+    text-decoration: none;
+    color: inherit; /* Hérite de la couleur du bouton */
+    display: block; /* Permet au lien de remplir le bouton */
+}
+
+
+/* Fin Conteneur vidéo Nouveauté */
+
+
+/* Début tableau Porsche */
+table.porsche {
+    border-collapse: collapse;
+    width: 100%;
+    table-layout: fixed; /* Force chaque colonne à avoir une largeur fixe */
+}
+
+.porsche th, .porsche td {
+    padding: 10px;
+    box-sizing: border-box;
+    text-align: center; 
+    width: 20%; /* Assure que chaque colonne occupe 20% de la largeur totale */
+    height: 60px; /* Fixe une hauteur uniforme */
+}
+
+.porsche th a {
+    font-weight: bold; 
+    text-decoration: none;
+    color: inherit;
+}
+
+.porsche tr:nth-of-type(even) {
+    background: hsla(0, 0%, 36%, 0.575);
+}
+
+.porsche th, .porsche td {
+    border: 1px solid var(--ecriture); 
+}
+
+.porsche th {
+    background-color: var(--background);
+    color: var(--ecriture); 
+    text-transform: uppercase;
+}
+
+.table-titre {
+    text-align: center;
+    font-size: 1.5em; /* Augmente la taille de la police pour le titre */
+    font-weight: bold;
+    background-color: var(--background); /* Ajoute une couleur de fond */
+    color: var(--ecriture); /* Couleur de texte */
+    padding: 10px; /* Ajoute un peu d'espace autour du texte */
+}
+
+/* Fin tableau Porsche */
