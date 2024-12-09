@@ -1,0 +1,12 @@
+														projet site web :
+
+Menu : ok ( texte et images cliquable )
+
+Liens hypertexte ok:
+
+Tableaux : OUI
+
+Formulaire : NON
+
+Changer de style : ok
+
