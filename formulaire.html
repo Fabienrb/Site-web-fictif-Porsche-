@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Porsche accueil</title>
+    <title>Porsche Formulaire</title>
     <link rel="stylesheet" href="style.css">
     <link rel="shortcut icon" href="image/logo porche.png" />
 </head>
@@ -39,7 +39,67 @@
 
     <header></header>
 
+    <!--Début Formulaire -->
+    <div class="corpsform">
+        <div class="form-container">
+            <h1>Inscription à la lettre d'information</h1>
+            <form>
+                <div class="form-content">
+                    <!-- Première colonne -->
+                    <div class="form-column">
+                        <div class="form-group">
+                            <label for="nom">Nom:</label>
+                            <input type="text" id="nom" name="nom">
+                        </div>
+                        <div class="form-group">
+                            <label for="prenom">Prénom:</label>
+                            <input type="text" id="prenom" name="prenom">
+                        </div>
+                        <div class="form-group">
+                            <label for="adresse">Adresse (Numéro et rue):</label>
+                            <input type="text" id="adresse" name="adresse">
+                        </div>
+                        <div class="form-group">
+                            <label for="ville">Ville (Ville et code postal):</label>
+                            <input type="text" id="ville" name="ville">
+                        </div>
+                        <div class="form-group">
+                            <label for="telephone">Téléphone:</label>
+                            <input type="tel" id="telephone" name="telephone">
+                        </div>
+                    </div>
+                    <!-- Deuxième colonne -->
+                    <div class="column">
+                        <fieldset>
+                            <legend>Confirmer l'inscription:</legend>
+                            <div>
+                                <input type="checkbox" id="lettre" name="lettre">
+                                <label for="lettre">Je souhaite recevoir la lettre d'information</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" id="offres" name="offres">
+                                <label for="offres">J'accepte de recevoir des offres des partenaires</label>
+                            </div>
+                        </fieldset>
+                        <fieldset>
+                            <legend>Format de la lettre:</legend>
+                            <div>
+                                <input type="radio" id="html" name="format" value="html" checked>
+                                <label for="html">Format HTML (recommandé)</label>
+                            </div>
+                            <div>
+                                <input type="radio" id="texte" name="format" value="texte">
+                                <label for="texte">Format texte brut</label>
+                            </div>
+                        </fieldset>
+                    </div>
+                </div>
+                <button type="submit">S'inscrire</button>
+            </form>
+        </div>
+    </div>
     
+    <!--Fin Formulaire -->
 
     <!-- Début Script JS -->
     
