@@ -61,6 +61,10 @@ header {
     margin-top: 10px;
 }
 
+.imgsite {
+    height: 300px;
+}
+
 .cadre {
     font-size: 25px;
     border-radius: 10px;
