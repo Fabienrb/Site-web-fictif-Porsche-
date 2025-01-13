@@ -145,6 +145,10 @@ header {
     font-family: cursive;
 }
 
+.imgtab img{
+    width: 70px;
+}
+
 /* Fin contenu acceuil */
 
 /* Début Barre de navigation version PC */
@@ -161,12 +165,11 @@ header {
 
 .navbar a {
     color: var(--ecriture);
-    font-size: 30px;
+    font-size: 22px;
 }
 
-.navbar .logo {
-    font-size: 2em;
-    font-weight: bold;
+.navbar .logo img{
+    width: 0.0000000001px;
 }
 
 
