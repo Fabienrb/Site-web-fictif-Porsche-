@@ -1,4 +1,18 @@
 /*Début Général */
+:root {
+    --ecriture: #262626; /* Couleur de texte clair */
+    --background: #f1f1f1; /* Couleur de fond clair */
+    --ecriture2: #494949; /* Couleur de texte secondaire clair */
+    --fond : #F1F1F1;
+}
+
+[data-theme="dark"] {
+    --ecriture: #f1f1f1; /* Couleur de texte sombre */
+    --background: #262626; /* Couleur de fond sombre */
+    --ecriture2: #64648b; /* Couleur de texte secondaire sombre */
+    --fond : #64648b62;
+}
+
 
 * {
     margin: 0;
@@ -142,6 +156,9 @@ header {
 
 .profil p2 a {
     color: var(--ecriture2);
+}
+
+.profil p2 a:hover {
     text-decoration: underline; 
 }
 
@@ -219,22 +236,6 @@ header {
     border-radius: 15px;
     z-index: 4;
 }
-
-:root {
-    --ecriture: #262626; /* Couleur de texte clair */
-    --background: #f1f1f1; /* Couleur de fond clair */
-    --ecriture2: #494949; /* Couleur de texte secondaire clair */
-    --fond : #F1F1F1;
-}
-
-[data-theme="dark"] {
-    --ecriture: #f1f1f1; /* Couleur de texte sombre */
-    --background: #262626; /* Couleur de fond sombre */
-    --ecriture2: #64648b; /* Couleur de texte secondaire sombre */
-    --fond : #64648b62;
-}
-
-
 
 .navbar, .profil, .contenu, footer {
     color: var(--ecriture2);
