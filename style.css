@@ -25,6 +25,9 @@ header {
 
 /*Fin Général */
 
+/* Début contenu acceuil */
+
+
 .contenu {
     display: flex;
     justify-content: center;
@@ -228,7 +231,7 @@ header {
     --ecriture: #f1f1f1; /* Couleur de texte sombre */
     --background: #262626; /* Couleur de fond sombre */
     --ecriture2: #64648b; /* Couleur de texte secondaire sombre */
-    --fond : #64648b;
+    --fond : #64648b62;
 }
 
 
