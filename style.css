@@ -434,6 +434,10 @@ table.porsche {
     padding: 10px; /* Ajoute un peu d'espace autour du texte */
 }
 
+.table-titre:hover {
+    text-decoration: underline;
+}
+
 /* Fin tableau Porsche */
 
 
