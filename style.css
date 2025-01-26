@@ -295,15 +295,13 @@ header {
 }
 
 /* Vidéo Nouveauté */
-.video-nouveaute {
+.photo-nouveaute {
     width: 100%; /* Remplit le conteneur */
-    height: auto; /* Conserve les proportions de la vidéo */
+    height: auto; /* Conserve les proportions de la photo */
     display: block;
-    object-fit: cover; /* Ajuste l'apparence de la vidéo si elle dépasse les dimensions */
+    object-fit: cover; /* Ajuste l'apparence de la photo si elle dépasse les dimensions */
     border-radius: 15px;
 }
-
-
 
 .contener h1 {
     font-size: 30px;
